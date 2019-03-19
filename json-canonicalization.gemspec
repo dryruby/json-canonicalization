@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.authors               = ['Gregg Kellogg']
 
   gem.platform              = Gem::Platform::RUBY
-  gem.files                 = %w(AUTHORS README.md UNLICENSE VERSION) + Dir.glob('lib/**/*.rb')
+  gem.files                 = %w(AUTHORS README.md LICENSE VERSION) + Dir.glob('lib/**/*.rb')
   gem.test_files            = Dir.glob('spec/**/*.rb') + Dir.glob('spec/**/*.json')
 
   gem.required_ruby_version = '>= 2.2.2'
