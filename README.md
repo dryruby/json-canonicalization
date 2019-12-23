@@ -20,7 +20,7 @@ constraining JSON data to the<br>I-JSON [[RFC7493](https://tools.ietf.org/html//
 and through a platform independent property sorting scheme.
 
 Working document: https://cyberphone.github.io/ietf-json-canon<br>
-Published IETF Draft: https://tools.ietf.org/html/draft-rundgren-json-canonicalization-scheme-05
+Published IETF Draft: https://tools.ietf.org/html/draft-rundgren-json-canonicalization-scheme-16
 
 The JSON Canonicalization Scheme concept in a nutshell:
 - Serialization of primitive JSON data types using methods compatible with ECMAScript's `JSON.stringify()`
@@ -30,7 +30,8 @@ The JSON Canonicalization Scheme concept in a nutshell:
 ### Sample Input:
 ```code
 {
-  "numbers": [333333333.33333329, 1E30, 4.50, 2e-3, 0.000000000000000000000000001],
+  "numbers": [333333333.33333329, 1E30, 4.50,
+              2e-3, 0.000000000000000000000000001],
   "string": "\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/",
   "literals": [null, true, false]
 }
@@ -66,8 +67,8 @@ Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonica
 * {JSON::Canonicalization}
 
 ## Dependencies
-* [Ruby](http://ruby-lang.org/) (>= 2.2.2)
-* [JSON](https://rubygems.org/gems/json) (>= 2.1)
+* [Ruby](http://ruby-lang.org/) (>= 2.4)
+* [JSON](https://rubygems.org/gems/json) (>= 2.3)
 
 ## Author
 * [Gregg Kellogg](http://github.com/gkellogg) - <http://kellogg-assoc.com/>
