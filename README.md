@@ -4,7 +4,7 @@ An implementation of the JSON Canonicalization Scheme for Ruby
 Implements version 5 of [draft-rundgren-json-canonicalization-scheme-05](https://tools.ietf.org/html/draft-rundgren-json-canonicalization-scheme-05#page-5).
 
 [![Gem Version](https://badge.fury.io/rb/json-canonicalization.png)](http://badge.fury.io/rb/json-canonicalization)
-[![Build Status](https://travis-ci.org/dryruby/json-canonicalization.png?branch=master)](http://travis-ci.org/dryruby/json-canonicalization)
+[![Build Status](https://github.com/dryruby/json-canonicalization/workflows/CI/badge.svg?branch=develop)](https://github.com/dryruby/json-canonicalization/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/dryruby/json-canonicalization/badge.svg)](https://coveralls.io/r/dryruby/json-canonicalization)
 
 # Description
