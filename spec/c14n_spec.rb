@@ -9,3 +9,10 @@ describe "conversions" do
     end
   end
 end
+
+describe "special cases for hash keys" do
+    it "handles hash defined with symbols" do
+      data = { a: [{b:"b"}] }
+      expect(data.to_json_c14n).to eq "{\"a\":[{\"b\":\"b\"}]}"
+    end
+end

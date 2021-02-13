@@ -61,13 +61,21 @@ class Numeric
   end
 end
 
+def encode_key(k)
+  case k
+  when String
+    return k.encode(Encoding::UTF_16)
+  end
+  k
+end
+
 class Hash
   # Output JSON with keys sorted lexicographically
   # @return [String]
   def to_json_c14n
     "{" + self.
       keys.
-      sort_by {|k| k.encode(Encoding::UTF_16)}.
+      sort_by {|k| encode_key(k)}.
       map {|k| k.to_json_c14n + ':' + self[k].to_json_c14n}
       .join(',') +
     '}'
@@ -81,3 +89,12 @@ class String
     self.to_json
   end
 end
+
+class Symbol
+  # Output JSON with control characters escaped
+  # @return [String]
+  def to_json_c14n
+    self.to_json
+  end
+end
+
