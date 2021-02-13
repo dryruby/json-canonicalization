@@ -4,7 +4,7 @@ An implementation of the JSON Canonicalization Scheme for Ruby
 Implements version 5 of [draft-rundgren-json-canonicalization-scheme-05](https://tools.ietf.org/html/draft-rundgren-json-canonicalization-scheme-05#page-5).
 
 [![Gem Version](https://badge.fury.io/rb/json-canonicalization.png)](http://badge.fury.io/rb/json-canonicalization)
-[![Build Status](https://travis-ci.org/dryruby/json-canonicalization.png?branch=master)](http://travis-ci.org/dryruby/json-canonicalization)
+[![Build Status](https://github.com/dryruby/json-canonicalization/workflows/CI/badge.svg?branch=develop)](https://github.com/dryruby/json-canonicalization/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/dryruby/json-canonicalization/badge.svg)](https://coveralls.io/r/dryruby/json-canonicalization)
 
 # Description
@@ -84,10 +84,14 @@ Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonica
   list in the the `README`. Alphabetical order applies.
 * Do note that in order for us to merge any non-trivial changes (as a rule
   of thumb, additions larger than about 15 lines of code), we need an
-  explicit [public domain dedication][PDD] on record from you.
+  explicit [public domain dedication][PDD] on record from you,
+  which you will be asked to agree to on the first commit to a repo within the organization.
 
-##License
+## License
 
 This is free and unencumbered public domain software. For more information,
 see <http://unlicense.org/> or the accompanying {file:UNLICENSE} file.
 
+[YARD]:           https://yardoc.org/
+[YARD-GS]:        https://rubydoc.info/docs/yard/file/docs/GettingStarted.md
+[PDD]:            https://unlicense.org/#unlicensing-contributions

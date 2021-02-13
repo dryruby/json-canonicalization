@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = '>= 2.4'
   gem.requirements          = []
-  gem.add_development_dependency 'rspec',           '~> 3.9'
+  gem.add_development_dependency 'rspec',           '~> 3.10'
   gem.add_development_dependency 'yard' ,           '~> 0.9'
 
   gem.post_install_message  = nil
