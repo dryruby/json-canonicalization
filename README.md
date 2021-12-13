@@ -67,8 +67,8 @@ Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonica
 * {JSON::Canonicalization}
 
 ## Dependencies
-* [Ruby](http://ruby-lang.org/) (>= 2.4)
-* [JSON](https://rubygems.org/gems/json) (>= 2.3)
+* [Ruby](http://ruby-lang.org/) (>= 2.6)
+* [JSON](https://rubygems.org/gems/json) (>= 2.6)
 
 ## Author
 * [Gregg Kellogg](http://github.com/gkellogg) - <http://kellogg-assoc.com/>
