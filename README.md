@@ -1,7 +1,7 @@
 # json-canonicalization
 An implementation of the JSON Canonicalization Scheme for Ruby
 
-Implements version 5 of [draft-rundgren-json-canonicalization-scheme-05](https://tools.ietf.org/html/draft-rundgren-json-canonicalization-scheme-05#page-5).
+Implements [RFC8785](https://datatracker.ietf.org/doc/html/rfc8785) (JSON Canonicalization Scheme) in Ruby.
 
 [![Gem Version](https://badge.fury.io/rb/json-canonicalization.png)](http://badge.fury.io/rb/json-canonicalization)
 [![Build Status](https://github.com/dryruby/json-canonicalization/workflows/CI/badge.svg?branch=develop)](https://github.com/dryruby/json-canonicalization/actions?query=workflow%3ACI)
@@ -19,8 +19,7 @@ primitives as defined by ECMAScript [[ES6](https://www.ecma-international.org/ec
 constraining JSON data to the<br>I-JSON [[RFC7493](https://tools.ietf.org/html//rfc7493)] subset,
 and through a platform independent property sorting scheme.
 
-Working document: https://cyberphone.github.io/ietf-json-canon<br>
-Published IETF Draft: https://tools.ietf.org/html/draft-rundgren-json-canonicalization-scheme-16
+RFC: https://datatracker.ietf.org/doc/html/rfc8785
 
 The JSON Canonicalization Scheme concept in a nutshell:
 - Serialization of primitive JSON data types using methods compatible with ECMAScript's `JSON.stringify()`
@@ -67,8 +66,8 @@ Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonica
 * {JSON::Canonicalization}
 
 ## Dependencies
-* [Ruby](http://ruby-lang.org/) (>= 2.4)
-* [JSON](https://rubygems.org/gems/json) (>= 2.3)
+* [Ruby](http://ruby-lang.org/) (>= 2.6)
+* [JSON](https://rubygems.org/gems/json) (>= 2.6)
 
 ## Author
 * [Gregg Kellogg](http://github.com/gkellogg) - <http://kellogg-assoc.com/>
@@ -90,7 +89,7 @@ Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonica
 ## License
 
 This is free and unencumbered public domain software. For more information,
-see <http://unlicense.org/> or the accompanying {file:UNLICENSE} file.
+see <https://unlicense.org/> or the accompanying {file:UNLICENSE} file.
 
 [YARD]:           https://yardoc.org/
 [YARD-GS]:        https://rubydoc.info/docs/yard/file/docs/GettingStarted.md

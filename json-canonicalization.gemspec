@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.files                 = %w(AUTHORS README.md LICENSE VERSION) + Dir.glob('lib/**/*.rb')
   gem.test_files            = Dir.glob('spec/**/*.rb') + Dir.glob('spec/**/*.json')
 
-  gem.required_ruby_version = '>= 2.4'
+  gem.required_ruby_version = '>= 2.6'
   gem.requirements          = []
   gem.add_development_dependency 'rspec',           '~> 3.10'
   gem.add_development_dependency 'yard' ,           '~> 0.9'
