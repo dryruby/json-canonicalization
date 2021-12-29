@@ -89,7 +89,7 @@ Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonica
 ## License
 
 This is free and unencumbered public domain software. For more information,
-see <https://unlicense.org/> or the accompanying {file:UNLICENSE} file.
+see <https://unlicense.org/> or the accompanying {file:LICENSE} file.
 
 [YARD]:           https://yardoc.org/
 [YARD-GS]:        https://rubydoc.info/docs/yard/file/docs/GettingStarted.md
