@@ -10,6 +10,12 @@ Gem::Specification.new do |gem|
   gem.license               = 'Unlicense'
   gem.summary               = "JSON Canonicalization for Ruby."
   gem.description           = "JSON::Canonicalization generates canonical JSON output from Ruby objects."
+  gem.metadata           = {
+    "documentation_uri" => "https://dryruby.github.io/json-canonicalization",
+    "bug_tracker_uri"   => "https://github.com/dryruby/json-canonicalization/issues",
+    "homepage_uri"      => "https://github.com/dryruby/json-canonicalization",
+    "source_code_uri"   => "https://github.com/dryruby/json-canonicalization",
+  }
 
   gem.authors               = ['Gregg Kellogg']
 

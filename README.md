@@ -60,7 +60,7 @@ puts data.to_json_c14n
 ```
 
 ## Documentation
-Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonicalization/file/README.md)
+Full documentation available on [RubyDoc](https://dryruby.github.io/json-canonicalization/file/README.md)
 
 ### Principal Classes
 * {JSON::Canonicalization}
