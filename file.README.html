@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; JSON::Canonicalization
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-json-canonicalization">json-canonicalization</h1>
+
+<p>An implementation of the JSON Canonicalization Scheme for Ruby</p>
+
+<p>Implements <a href="https://datatracker.ietf.org/doc/html/rfc8785">RFC8785</a> (JSON Canonicalization Scheme) in Ruby.</p>
+
+<p><a href="http://badge.fury.io/rb/json-canonicalization"><img src="https://badge.fury.io/rb/json-canonicalization.png"></a> <a href="https://github.com/dryruby/json-canonicalization/actions?query=workflow%3ACI"><img src="https://github.com/dryruby/json-canonicalization/workflows/CI/badge.svg?branch=develop"></a> <a href="https://coveralls.io/r/dryruby/json-canonicalization"><img src="https://coveralls.io/repos/dryruby/json-canonicalization/badge.svg"></a></p>
+
+<h1 id="label-Description">Description</h1>
+
+<p>Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing. By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON [<a href="https://tools.ietf.org/html/rfc8259">RFC8259</a>] format can be exchanged “as is”, while still being subject to secure cryptographic operations. JCS achieves this by building on the serialization formats for JSON primitives as defined by ECMAScript [<a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ES6</a>], constraining JSON data to the<br>I-JSON [<a href="https://tools.ietf.org/html//rfc7493">RFC7493</a>] subset, and through a platform independent property sorting scheme.</p>
+
+<p>RFC: <a href="https://datatracker.ietf.org/doc/html/rfc8785">datatracker.ietf.org/doc/html/rfc8785</a></p>
+
+<p>The JSON Canonicalization Scheme concept in a nutshell: - Serialization of primitive JSON data types using methods compatible with ECMAScript’s <code>JSON.stringify()</code> - Lexicographic sorting of JSON <code>Object</code> properties in a <em>recursive</em> process - JSON <code>Array</code> data is also subject to canonicalization, <em>but element order remains untouched</em></p>
+
+<h3 id="label-Sample+Input-3A">Sample Input:</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>numbers</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span><span class='float'>333333333.33333329</span><span class='comma'>,</span> <span class='float'>1E30</span><span class='comma'>,</span> <span class='float'>4.50</span><span class='comma'>,</span>
+              <span class='float'>2e-3</span><span class='comma'>,</span> <span class='float'>0.000000000000000000000000001</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>string</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\u20ac$\u000F\u000aA&#39;\u0042\u0022\u005c\\\&quot;\/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>literals</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span><span class='id identifier rubyid_null'>null</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rbracket'>]</span>
+<span class='rbrace'>}</span>
+</code></pre>
+
+<h3 id="label-Expected+Output-3A">Expected Output:</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>literals</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span><span class='id identifier rubyid_null'>null</span><span class='comma'>,</span><span class='kw'>true</span><span class='comma'>,</span><span class='kw'>false</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>numbers</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span><span class='float'>333333333.3333333</span><span class='comma'>,</span><span class='float'>1e+30</span><span class='comma'>,</span><span class='float'>4.5</span><span class='comma'>,</span><span class='float'>0.002</span><span class='comma'>,</span><span class='float'>1e-27</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>string</span><span class='label_end'>&quot;:</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>€$\u000f\nA&#39;B\&quot;\\\\\&quot;/</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+</code></pre>
+
+<h2 id="label-Usage">Usage</h2>
+
+<p>The library accepts Ruby input and generates canonical JSON via the <code>#to_json_c14n</code> method. This is based on the standard JSON gem’s version of <code>#to_json</code> with overloads for <code>Hash</code>, <code>String</code> and <code>Numeric</code></p>
+
+<pre class="code ruby"><code class="ruby">data = {
+  &quot;numbers&quot; =&gt; [
+    333333333.3333333,
+    1.0e+30,
+    4.5,
+    0.002,
+    1.0e-27
+  ],
+  &quot;string&quot; =&gt; &quot;€$\u000F\nA&#39;B\&quot;\\\\\&quot;/&quot;,
+  &quot;literals&quot; =&gt; [nil, true, false]
+}
+
+puts data.to_json_c14n
+=&gt;
+</code></pre>
+
+<h2 id="label-Documentation">Documentation</h2>
+
+<p>Full documentation available on <a href="https://dryruby.github.io/json-canonicalization/">GitHub</a></p>
+
+<h3 id="label-Principal+Classes">Principal Classes</h3>
+<ul><li>
+<p><span class='object_link'><a href="JSON/Canonicalization.html" title="JSON::Canonicalization (module)">JSON::Canonicalization</a></span></p>
+</li></ul>
+
+<h2 id="label-Dependencies">Dependencies</h2>
+<ul><li>
+<p><a href="http://ruby-lang.org/">Ruby</a> (&gt;= 2.6)</p>
+</li><li>
+<p><a href="https://rubygems.org/gems/json">JSON</a> (&gt;= 2.6)</p>
+</li></ul>
+
+<h2 id="label-Author">Author</h2>
+<ul><li>
+<p><a href="https://github.com/gkellogg">Gregg Kellogg</a> - <a href="https://greggkellogg.net">greggkellogg.net</a>/</p>
+</li></ul>
+
+<h2 id="label-Contributing">Contributing</h2>
+<ul><li>
+<p>Do your best to adhere to the existing coding conventions and idioms.</p>
+</li><li>
+<p>Don’t use hard tabs, and don’t leave trailing whitespace on any line.</p>
+</li><li>
+<p>Do document every method you add using <a href="https://yardoc.org/">YARD</a> annotations. Read the  <a href="https://rubydoc.info/docs/yard/file/docs/GettingStarted.md">tutorial</a> or just look at the existing code for examples.</p>
+</li><li>
+<p>Don’t touch the <code>json-ld.gemspec</code>, <code>VERSION</code> or <code>AUTHORS</code> files. If you need to  change them, do so on your private branch only.</p>
+</li><li>
+<p>Do feel free to add yourself to the <code>CREDITS</code> file and the corresponding  list in the the <code>README</code>. Alphabetical order applies.</p>
+</li><li>
+<p>Do note that in order for us to merge any non-trivial changes (as a rule  of thumb, additions larger than about 15 lines of code), we need an  explicit <a href="https://unlicense.org/#unlicensing-contributions">public domain dedication</a> on record from you,  which you will be asked to agree to on the first commit to a repo within the organization.</p>
+</li></ul>
+
+<h2 id="label-License">License</h2>
+
+<p>This is free and unencumbered public domain software. For more information, see <a href="https://unlicense.org">unlicense.org</a>/ or the accompanying <a href="file.LICENSE.html" title="LICENSE">LICENSE</a> file.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Sun Nov 27 14:37:20 2022 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.27 (ruby-3.1.2).
+</div>
+
+    </div>
+  </body>
+</html>
