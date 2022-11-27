@@ -60,7 +60,7 @@ puts data.to_json_c14n
 ```
 
 ## Documentation
-Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonicalization/file/README.md)
+Full documentation available on [GitHub](https://dryruby.github.io/json-canonicalization/)
 
 ### Principal Classes
 * {JSON::Canonicalization}
@@ -70,7 +70,7 @@ Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonica
 * [JSON](https://rubygems.org/gems/json) (>= 2.6)
 
 ## Author
-* [Gregg Kellogg](http://github.com/gkellogg) - <http://kellogg-assoc.com/>
+* [Gregg Kellogg](https://github.com/gkellogg) - <https://greggkellogg.net/>
 
 ## Contributing
 * Do your best to adhere to the existing coding conventions and idioms.
@@ -89,7 +89,7 @@ Full documentation available on [RubyDoc](http://rubydoc.info/gems/json-canonica
 ## License
 
 This is free and unencumbered public domain software. For more information,
-see <https://unlicense.org/> or the accompanying {file:UNLICENSE} file.
+see <https://unlicense.org/> or the accompanying {file:LICENSE} file.
 
 [YARD]:           https://yardoc.org/
 [YARD-GS]:        https://rubydoc.info/docs/yard/file/docs/GettingStarted.md
