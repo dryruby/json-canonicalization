@@ -6,6 +6,7 @@ group :development, :test do
   gem 'simplecov-lcov', '~> 0.8',  platforms: :mri
   gem 'benchmark-ips'
   gem 'rake'
+  gem 'activesupport'
 end
 
 group :debug do
