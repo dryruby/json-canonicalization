@@ -3,7 +3,7 @@ An implementation of the JSON Canonicalization Scheme for Ruby
 
 Implements [RFC8785](https://datatracker.ietf.org/doc/html/rfc8785) (JSON Canonicalization Scheme) in Ruby.
 
-[![Gem Version](https://badge.fury.io/rb/json-canonicalization.png)](http://badge.fury.io/rb/json-canonicalization)
+[![Gem Version](https://badge.fury.io/rb/json-canonicalization.svg)](http://badge.fury.io/rb/json-canonicalization)
 [![Build Status](https://github.com/dryruby/json-canonicalization/workflows/CI/badge.svg?branch=develop)](https://github.com/dryruby/json-canonicalization/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/dryruby/json-canonicalization/badge.svg)](https://coveralls.io/r/dryruby/json-canonicalization)
 
