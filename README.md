@@ -66,7 +66,7 @@ Full documentation available on [GitHub](https://dryruby.github.io/json-canonica
 * {JSON::Canonicalization}
 
 ## Dependencies
-* [Ruby](http://ruby-lang.org/) (>= 2.6)
+* [Ruby](http://ruby-lang.org/) (>= 3.0)
 * [JSON](https://rubygems.org/gems/json) (>= 2.6)
 
 ## Author
