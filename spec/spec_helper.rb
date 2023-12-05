@@ -2,8 +2,6 @@ $:.unshift(File.join("../../lib", __FILE__))
 
 require "bundler/setup"
 require 'rspec'
-require 'active_support'
-require 'active_support/core_ext'
 
 begin
   require 'simplecov'

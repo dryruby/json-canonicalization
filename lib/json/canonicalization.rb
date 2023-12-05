@@ -15,7 +15,7 @@ class Object
   # Default canonicalization output for Ruby objects
   # @return [String]
   def to_json_c14n
-    ::JSON.generate(self)
+    self.to_json
   end
 end
 
@@ -86,7 +86,7 @@ class String
   # Output JSON with control characters escaped
   # @return [String]
   def to_json_c14n
-    ::JSON.generate(self)
+    self.to_json
   end
 end
 
@@ -94,6 +94,6 @@ class Symbol
   # Output JSON with control characters escaped
   # @return [String]
   def to_json_c14n
-    ::JSON.generate(self)
+    self.to_json
   end
 end
